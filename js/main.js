@@ -45,9 +45,11 @@ getElement("apply-btn").addEventListener("click", function(event){
         total.innerText = totalPrice;
 
         getElement("applied-text").style.display = "block";
+        getElement("not-applied-text").style.display = "none";
     }
     else{
         getElement("not-applied-text").style.display = "block";
+        getElement("applied-text").style.display = "none";
     }
     code.value = "";
 });
