@@ -28,6 +28,9 @@ onClick("eightGB", "memory-cost", 0);
 onClick("sixteenGB", "memory-cost", 300);
 onClick("ssd1", "storage-cost", 0);
 onClick("ssd2", "storage-cost", 200);
+onClick("ssd3", "storage-cost", 500);
+onClick("free-delivery", "delivery-cost", 0);
+onClick("paid-delivery", "delivery-cost", 20);
 
 const fakeCode = "pHero";
 getElement("apply-btn").addEventListener("click", function(event){
@@ -40,6 +43,11 @@ getElement("apply-btn").addEventListener("click", function(event){
         const discount = totalPrice * 20 / 100;
         totalPrice -= discount;
         total.innerText = totalPrice;
+
+        getElement("applied-text").style.display = "block";
+    }
+    else{
+        getElement("not-applied-text").style.display = "block";
     }
     code.value = "";
 });
